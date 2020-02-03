@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as StoreActions from '../store/actions/store.actions';
+import * as StoreActions from '../../store/actions/store.actions';
 import { Store } from '@ngrx/store';
-import { AppState } from '../store/app.state';
+import { AppState } from '../../store/app.state';
 
 
 @Component({

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { StoreFormsApp } from '../store/models/store.model';
+import { StoreFormsApp } from '../../store/models/store.model';
 import { Store } from '@ngrx/store';
-import { AppState } from '../store/app.state';
+import { AppState } from '../../store/app.state';
 
 @Component({
   selector: 'app-forms-store-display',
