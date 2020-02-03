@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="form1">
+
+        <div class="title1">
+            Wprowadź dane, które zostaną wyświetlone w tabeli
+        </div>
+
+        <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+
+            <label></label><input name="name" class="inputfield" placeholder="IMIĘ" formControlName="name"
+                [(ngModel)]="newname"><br />
+
+            <label></label><input name="lastname" class="inputfield" placeholder="NAZWISKO" formControlName="lastname"
+                [(ngModel)]="newlastname"><br />
+
+            <label></label><input name="address" class="inputfield" placeholder="ADRES" formControlName="address"
+                [(ngModel)]="newaddress"><br />
+
+            <label></label><input name="sex" class="inputfield" placeholder="PŁEĆ" formControlName="sex"
+                [(ngModel)]="newsex"><br />
+
+            <label></label><input name="age" class="inputfield" placeholder="WIEK" formControlName="age"
+                [(ngModel)]="newage"><br />
+
+            <button class="submitbtn" type="submit" (click)="addTodo()">Wyślij dane</button>
+
+        </form>
+    </div>
+
+</div>

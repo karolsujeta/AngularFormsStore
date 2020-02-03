@@ -1,0 +1,19 @@
+<div class="resultstable">
+    <table>
+        <tr>
+            <th>IMIĘ</th>
+            <th>NAZWISKO</th>
+            <th>ADRES</th>
+            <th>PŁEĆ</th>
+            <th>WIEK</th>
+        </tr>
+
+        <tr *ngFor="let todo of todos">
+            <td>{{todo.name}}</td>
+            <td>{{todo.lastname}}</td>
+            <td>{{todo.address}}</td>
+            <td>{{todo.sex}}</td>
+            <td>{{todo.age}}</td>
+        </tr>
+    </table>
+</div>

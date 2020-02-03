@@ -1,0 +1,19 @@
+<div class="resultsstore">
+    <table>
+        <tr>
+            <th>IMIĘ</th>
+            <th>NAZWISKO</th>
+            <th>ADRES</th>
+            <th>PŁEĆ</th>
+            <th>WIEK</th>
+        </tr>
+
+        <tr *ngFor="let store of stores |async;">
+            <td>{{store.name}}</td>
+            <td>{{store.lastname}}</td>
+            <td>{{store.address}}</td>
+            <td>{{store.sex}}</td>
+            <td>{{store.age}}</td>
+        </tr>
+    </table>
+</div>

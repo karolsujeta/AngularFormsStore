@@ -1,0 +1,20 @@
+<div class="containerstore">
+
+    <div class="form2">
+
+        <div class="title2">
+            Wprowadź dane, które zostaną wysłane i odebrane ze store'a
+        </div>
+        
+        <div class="datastore">
+            <label></label><input class="inputfieldstore" placeholder="IMIĘ" #name><br />
+            <label></label><input class="inputfieldstore" placeholder="NAZWISKO" #lastname><br />
+            <label></label><input class="inputfieldstore" placeholder="ADRES" #address><br />
+            <label></label><input class="inputfieldstore" placeholder="PŁEĆ" #sex><br />
+            <label></label><input class="inputfieldstore" placeholder="WIEK" #age><br />
+
+            <button (click)="addUser(name.value, lastname.value, address.value, sex.value, age.value )"
+                class="submitbtnstore">Wyślij do store</button>
+        </div>
+    </div>
+</div>

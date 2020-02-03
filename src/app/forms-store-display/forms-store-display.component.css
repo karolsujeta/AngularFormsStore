@@ -1,0 +1,19 @@
+.resultsstore{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    color: #ffffff;
+    font-size: 18px;
+    font-style: italic;
+    border: 1px solid #7c7c7c;
+    text-align: center;
+    background-color: rgb(54, 54, 54);
+    width: 30%;
+}
+
+th, td{
+    padding: 5px;
+    font-size: 22px;
+}
