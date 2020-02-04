@@ -13,7 +13,7 @@ export class AppComponent {
     name: 'Jakub',
     lastname: 'Nowak',
     address: 'Mieszka',
-    sex: 'Mężczyzna',
+    sex: 'M',
     age: '24'
   }];
 

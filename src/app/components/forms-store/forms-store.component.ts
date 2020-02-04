@@ -21,7 +21,7 @@ export class FormsStoreComponent implements OnInit {
       name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(15)]],
       lastname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
       address: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
-      sex: ['', Validators.required],
+      sex: ['', [Validators.required, Validators.pattern("[A-Za-z]{1}")]],
       age: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3), Validators.pattern('[0-9]{1}|[0-9]{2}|[0-9]{3}')]],
     });
 
@@ -62,6 +62,7 @@ export class FormsStoreComponent implements OnInit {
     },
     sex: {
       required: "Wprowadź płeć: Mężczyzna/Kobieta",
+      pattern: "Zły format!",
     },
     age: {
       required: "Wprowadź wiek!",

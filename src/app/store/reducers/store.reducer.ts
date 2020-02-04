@@ -5,7 +5,7 @@ const initialState: StoreFormsApp = {
     name: "Jan",
     lastname: "Kowalski",
     address: "Piasta",
-    sex: "Mężczyzna",
+    sex: "M",
     age: 22
 }
 
