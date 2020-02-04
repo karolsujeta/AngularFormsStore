@@ -5,16 +5,29 @@
         <div class="title2">
             Wprowadź dane, które zostaną wysłane i odebrane ze store'a
         </div>
-        
-        <div class="datastore">
-            <label></label><input class="inputfieldstore" placeholder="IMIĘ" #name><br />
-            <label></label><input class="inputfieldstore" placeholder="NAZWISKO" #lastname><br />
-            <label></label><input class="inputfieldstore" placeholder="ADRES" #address><br />
-            <label></label><input class="inputfieldstore" placeholder="PŁEĆ" #sex><br />
-            <label></label><input class="inputfieldstore" placeholder="WIEK" #age><br />
 
-            <button (click)="addUser(name.value, lastname.value, address.value, sex.value, age.value )"
-                class="submitbtnstore">Wyślij do store</button>
+        <div class="datastore">
+            <form [formGroup]="modelFormStore">
+                <label></label><input class="inputfieldstore" placeholder="IMIĘ" #name formControlName="name"
+                    name="name">
+                <span class="valid" *ngIf="formErrors.name">{{formErrors.name}}</span><br />
+
+                <label></label><input class="inputfieldstore" placeholder="NAZWISKO" #lastname
+                    formControlName="lastname">
+                <span class="valid" *ngIf="formErrors.lastname">{{formErrors.lastname}}</span><br />
+
+                <label></label><input class="inputfieldstore" placeholder="ADRES" #address formControlName="address">
+                <span class="valid" *ngIf="formErrors.address">{{formErrors.address}}</span><br />
+
+                <label></label><input class="inputfieldstore" placeholder="PŁEĆ" #sex formControlName="sex">
+                <span class="valid" *ngIf="formErrors.sex">{{formErrors.sex}}</span><br />
+
+                <label></label><input class="inputfieldstore" placeholder="WIEK" #age formControlName="age">
+                <span class="valid" *ngIf="formErrors.age">{{formErrors.age}}</span><br />
+
+                <button (click)="addUser(name.value, lastname.value, address.value, sex.value, age.value )"
+                    class="submitbtnstore" [disabled]="modelFormStore.invalid">Wyślij do store</button>
+            </form>
         </div>
     </div>
 </div>

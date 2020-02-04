@@ -16,24 +16,25 @@
             <label for="ilastname"></label>
             <input id="ilastname" name="lastname" class="inputfield" placeholder="NAZWISKO" formControlName="lastname"
                 [(ngModel)]="newlastname">
-            <span *ngIf="formErrors.lastname">{{ formErrors.lastname }}</span><br />
+            <span class="valid" *ngIf="formErrors.lastname">{{ formErrors.lastname }}</span><br />
 
             <label for="iaddress"></label>
             <input id="iaddress" name="address" class="inputfield" placeholder="ADRES" formControlName="address"
                 [(ngModel)]="newaddress">
-            <span *ngIf="formErrors.address">{{ formErrors.address }}</span><br />
+            <span class="valid" *ngIf="formErrors.address">{{ formErrors.address }}</span><br />
 
             <label for="isex"></label>
             <input id="isex" name="sex" class="inputfield" placeholder="PŁEĆ" formControlName="sex"
                 [(ngModel)]="newsex">
-            <span *ngIf="formErrors.sex">{{ formErrors.sex }}</span><br />
+            <span class="valid" *ngIf="formErrors.sex">{{ formErrors.sex }}</span><br />
 
             <label for="iage"></label>
             <input id="iage" name="age" class="inputfield" placeholder="WIEK" formControlName="age"
                 [(ngModel)]="newage">
-            <span *ngIf="formErrors.age">{{ formErrors.age }}</span><br />
+            <span class="valid" *ngIf="formErrors.age">{{ formErrors.age }}</span><br />
 
-            <button class="submitbtn" type="submit" (click)="addTodo()" [disabled]="modelForm.invalid">Wyślij dane</button>
+            <button class="submitbtn" type="submit" (click)="addTodo()" [disabled]="modelForm.invalid">Wyślij
+                dane</button>
 
         </form>
     </div>

@@ -27,7 +27,7 @@ export class FormsComponent implements OnInit {
       lastname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
       address: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
       sex: ['', Validators.required],
-      age: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
+      age: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3), Validators.pattern('[0-9]{1}|[0-9]{2}|[0-9]{3}')]],
     });
 
     this.modelForm.valueChanges.pipe(debounceTime(1000)).subscribe((value) => {
@@ -68,6 +68,7 @@ export class FormsComponent implements OnInit {
       required: "Wprowadź wiek!",
       minlength: "Wprowadź najmniej 1 cyfrę!",
       maxlength: "Maksymalnie 3 znaki!",
+      pattern: "Zły format!"
     },
   }
 
